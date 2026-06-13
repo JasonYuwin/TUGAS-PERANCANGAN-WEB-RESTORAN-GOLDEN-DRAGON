@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Dragon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque nulla, aspernatur, impedit autem tempora amet architecto sunt rerum assumenda officiis magnam laborum quibusdam dolorem quos mollitia? Nisi tempora neque recusandae.</p>
-</body>
-</html>
+  <header class="site-header">
+    <h2 class="brand-name">Golden Dragon</h2>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#" class="active">Home</a>
+      <a href="#recommend">Recommendation</a>
+      <a href="#highlight">Highlight</a>
+      <a href="#order">Order</a>
+      <a href="#about">About</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Golden Dragon Restaurant">
+    <div class="hero-content">
+      <h1>Golden Dragon</h1>
+      <p>Hidangan Chinese food autentik dengan cita rasa modern.</p>
+      <a href="menu.html" class="hero-button">Lihat Menu</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="section-box" id="recommend">
+      <div class="section-heading">
+        <h2>Rekomendasi Menu</h2>
+        <p>Pilihan favorit pelanggan Golden Dragon.</p>
+      </div>
+
+      <div class="recommend-slider">
+        <article class="card card-large" data-category="best-seller">
+          <img src="ChickenRice.jpeg" alt="Chicken Rice">
+          <h3>Chicken Rice</h3>
+          <p class="menu-price">Rp 21000</p>
+          <p class="menu-desc">Kulit renyah dan rasa premium.</p>
+          <button type="button">Pilih Menu</button>
+        </article>
+
+        <article class="card card-large" data-category="best-seller">
+          <img src="kungpaoChicken.jpg" alt="Kung Pao Chicken">
+          <h3>Kung Pao Chicken</h3>
+          <p class="menu-price">Rp 45000</p>
+          <p class="menu-desc">Pedas manis khas Sichuan.</p>
+          <button type="button">Pilih Menu</button>
+        </article>
+
+        <article class="card card-large" data-category="best-seller">
+          <img src="BeefNoodles.jpg" alt="Beef Noodles">
+          <h3>Beef Noodles</h3>
+          <p class="menu-price">Rp 49000</p>
+          <p class="menu-desc">Kuah gurih dan hangat.</p>
+          <button type="button">Pilih Menu</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlight" class="content-section">
+      <div class="section-heading">
+        <h2>Menu Unggulan</h2>
+        <p>Menu populer yang cocok untuk makan bersama.</p>
+      </div>
+
+      <div class="menu-container">
+        <article class="card" data-category="nasi">
+          <img src="FriedRice.jpg" alt="Fried Rice">
+          <h4>Fried Rice</h4>
+          <p>Rp 20000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="mie">
+          <img src="Noodles.jpg" alt="Noodles">
+          <h4>Noodles</h4>
+          <p>Rp 30000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="dimsum">
+          <img src="dimsum.jpeg" alt="Dim Sum">
+          <h4>Dim Sum</h4>
+          <p>Rp 40000</p>
+          <button type="button">Pilih</button>
+        </article>

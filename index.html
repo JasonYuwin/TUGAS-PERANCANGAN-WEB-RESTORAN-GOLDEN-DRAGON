@@ -94,3 +94,100 @@
           <p>Rp 40000</p>
           <button type="button">Pilih</button>
         </article>
+
+        <article class="card" data-category="sup">
+          <img src="eggsoup.jpeg" alt="Egg Soup">
+          <h4>Egg Soup</h4>
+          <p>Rp 50000</p>
+          <button type="button">Pilih</button>
+        </article>
+      </div>
+
+      <div class="center-action">
+        <a href="menu.html" class="primary-link">Lihat Semua Menu</a>
+      </div>
+    </section>
+
+    <section class="section-box" id="order">
+      <div class="section-heading">
+        <h2>Pesanan Anda</h2>
+        <p>Pilih menu, atur jumlah, lalu isi data pelanggan.</p>
+      </div>
+
+      <div class="order-summary" aria-label="Ringkasan pesanan">
+        <div>
+          <span>Item</span>
+          <strong id="itemCount">0</strong>
+        </div>
+        <div>
+          <span>Estimasi</span>
+          <strong id="estimateTime">-</strong>
+        </div>
+        <div>
+          <span>Promo</span>
+          <strong id="promoInfo">Belum ada</strong>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Harga</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="total-price">Total: Rp 0</h3>
+
+      <form class="order-form">
+        <label for="nama">Nama Pelanggan</label>
+        <input type="text" id="nama" placeholder="Masukkan nama" required>
+
+        <label for="layanan">Jenis Layanan</label>
+        <select id="layanan">
+          <option>Makan di Tempat</option>
+          <option>Bawa Pulang</option>
+        </select>
+
+        <label for="pembayaran">Metode Pembayaran</label>
+        <select id="pembayaran">
+          <option>Cash</option>
+          <option>Transfer</option>
+          <option>E-Wallet</option>
+        </select>
+
+        <button type="submit">Pesan Sekarang</button>
+      </form>
+
+      <div class="order-message" aria-live="polite"></div>
+    </section>
+
+    <section class="section-box" id="about">
+      <div class="section-heading">
+        <h2>Tentang Kami</h2>
+      </div>
+      <p>Golden Dragon merupakan restoran yang menyajikan hidangan Chinese food autentik dengan sentuhan modern. 
+        Setiap menu dibuat dari bahan pilihan dan resep terbaik untuk menghadirkan rasa yang konsisten dan berkualitas. 
+        Kami hadir untuk memberikan pengalaman bersantap yang berkesan bagi setiap pelanggan.</p>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Hubungi Kami</h3>
+    <p>Telp: 0812-3456-7890 | Email: goldendragon@email.com</p>
+  </footer>
+</body>
+</html>

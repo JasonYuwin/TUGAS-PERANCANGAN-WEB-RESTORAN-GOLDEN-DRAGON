@@ -1,0 +1,208 @@
+/* ===== STYLE UMUM ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  background: #0f0f0f;
+  color: white;
+  padding-top: 80px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== HEADER DAN NAVIGASI ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #400000;
+  color: #f1c40f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.brand-name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.main-nav a,
+.back-btn {
+  color: #f1c40f;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.back-btn:hover {
+  background: #f1c40f;
+  color: #400000;
+}
+
+.main-nav a.active {
+  background: #f1c40f;
+  color: #400000;
+}
+
+.main-nav a.active:hover {
+  background: white;
+  color: #400000;
+}
+
+/* ===== HERO HALAMAN UTAMA ===== */
+.hero {
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("GoldenDragon.jpg") center/cover;
+  padding: 20px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  color: #f1c40f;
+}
+
+.hero p {
+  margin: 10px 0 20px;
+}
+
+.hero-button,
+.primary-link {
+  display: inline-block;
+  background: #400000;
+  color: #f1c40f;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+}
+
+.hero-button:hover,
+.primary-link:hover {
+  background: #f1c40f;
+  color: #400000;
+}
+
+/* ===== SECTION ===== */
+.content-section,
+.section-box {
+  margin-top: 25px;
+}
+
+.section-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-heading h2 {
+  margin-bottom: 5px;
+  color: #f1c40f;
+}
+
+.section-heading p,
+.menu-desc {
+  color: #cccccc;
+}
+
+/* ===== CARD MENU ===== */
+.recommend-slider,
+.menu-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.card {
+  min-width: 210px;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.card-large {
+  min-width: 300px;
+}
+
+.card:hover {
+  border-color: #f1c40f;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3,
+.card h4 {
+  margin: 12px 0 6px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.menu-price {
+  color: #f1c40f;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* ===== TOMBOL ===== */
+button {
+  margin-top: 12px;
+  background: #400000;
+  color: #f1c40f;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f1c40f;
+  color: #400000;
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 20px;
+}

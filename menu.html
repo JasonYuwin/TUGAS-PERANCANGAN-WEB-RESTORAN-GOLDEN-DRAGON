@@ -127,3 +127,126 @@
           <p>Rp 32000</p>
           <button type="button">Pilih</button>
         </article>
+
+        <article class="card" data-category="dimsum">
+          <img src="bakpau.png" alt="Bakpau">
+          <h4>Bakpau</h4>
+          <p>Rp 25000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="dimsum">
+          <img src="springroll.png" alt="Spring Roll">
+          <h4>Spring Roll</h4>
+          <p>Rp 27000</p>
+          <button type="button">Pilih</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Sup, Minuman, Dessert</h2>
+        <p>Lengkapi pesanan dengan menu hangat, segar, dan manis.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card" data-category="sup">
+          <img src="suptomyum.png" alt="Tom Yum Soup">
+          <h4>Tom Yum Soup</h4>
+          <p>Rp 42000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="minuman">
+          <img src="milktea.png" alt="Milk Tea">
+          <h4>Milk Tea</h4>
+          <p>Rp 18000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="minuman">
+          <img src="ChineseTea.jpeg" alt="Chinese Tea">
+          <h4>Chinese Tea</h4>
+          <p>Rp 15000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="dessert">
+          <img src="waffle.png" alt="Waffle">
+          <h4>Waffle</h4>
+          <p>Rp 24000</p>
+          <button type="button">Pilih</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-box" id="order">
+      <div class="section-heading">
+        <h2>Pesanan Anda</h2>
+        <p>Daftar pesanan pelanggan</p>
+      </div>
+
+      <div class="order-summary" aria-label="Ringkasan pesanan">
+        <div>
+          <span>Item</span>
+          <strong id="itemCount">0</strong>
+        </div>
+        <div>
+          <span>Estimasi</span>
+          <strong id="estimateTime">-</strong>
+        </div>
+        <div>
+          <span>Promo</span>
+          <strong id="promoInfo">Belum ada</strong>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Harga</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="total-price">Total: Rp 0</h3>
+
+      <form class="order-form">
+        <label for="nama-menu">Nama Pelanggan</label>
+        <input type="text" id="nama-menu" placeholder="Masukkan nama" required>
+
+        <label for="layanan-menu">Jenis Layanan</label>
+        <select id="layanan-menu">
+          <option>Dine In</option>
+          <option>Take Away</option>
+        </select>
+
+        <label for="pembayaran-menu">Metode Pembayaran</label>
+        <select id="pembayaran-menu">
+          <option>Cash</option>
+          <option>Transfer</option>
+          <option>E-Wallet</option>
+        </select>
+
+        <button type="submit">Pesan Sekarang</button>
+      </form>
+
+      <div class="order-message" aria-live="polite"></div>
+    </section>
+  </main>
+</body>
+</html>

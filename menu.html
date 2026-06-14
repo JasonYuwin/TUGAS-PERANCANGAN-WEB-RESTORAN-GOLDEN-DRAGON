@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Menu - Golden Dragon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-    
-</body>
-</html>
+
+<body class="menu-page">
+  <header class="site-header">
+    <h1 class="brand-name">All Menu</h1>
+
+    <nav class="main-nav" aria-label="Navigasi halaman menu">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section" id="menuContainer">
+      <div class="section-heading">
+        <h2>Daftar Menu</h2>
+        <p>Cari, filter kategori, dan pilih menu favorit Anda.</p>
+      </div>
+
+      <div class="menu-tools" aria-label="Pencarian dan filter menu">
+        <div>
+          <label for="menuSearch">Cari Menu</label>
+          <input type="search" id="menuSearch" placeholder="Contoh: rice, noodle, soup">
+        </div>
+
+        <div>
+          <label for="categoryFilter">Kategori</label>
+          <select id="categoryFilter">
+            <option value="all">Semua Kategori</option>
+            <option value="nasi">Nasi</option>
+            <option value="mie">Mie</option>
+            <option value="dimsum">Dimsum</option>
+            <option value="sup">Sup</option>
+            <option value="minuman">Minuman</option>
+            <option value="dessert">Dessert</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-heading menu-group-heading">
+        <h2>Nasi</h2>
+        <p>Menu nasi dengan pilihan rasa khas Golden Dragon.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card" data-category="nasi">
+          <img src="FriedRice.jpg" alt="Fried Rice">
+          <h4>Fried Rice</h4>
+          <p>Rp 14000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="nasi">
+          <img src="ChickenRice.jpeg" alt="Chicken Rice">
+          <h4>Chicken Rice</h4>
+          <p>Rp 21000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="nasi">
+          <img src="seafoodrice.jpg" alt="Seafood Rice">
+          <h4>Seafood Rice</h4>
+          <p>Rp 28000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="nasi">
+          <img src="spicyrice.jpg" alt="Spicy Rice">
+          <h4>Spicy Rice</h4>
+          <p>Rp 35000</p>
+          <button type="button">Pilih</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Mie</h2>
+        <p>Pilihan mie hangat, gurih, dan mengenyangkan.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card" data-category="mie">
+          <img src="chickennoodles.jpeg" alt="Chicken Noodles">
+          <h4>Chicken Noodles</h4>
+          <p>Rp 42000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="mie">
+          <img src="beefnoodle.png" alt="Beef Noodles">
+          <h4>Beef Noodles</h4>
+          <p>Rp 49000</p>
+          <button type="button">Pilih</button>
+        </article>
+
+        <article class="card" data-category="mie">
+          <img src="friednoodle.png" alt="Fried Noodles">
+          <h4>Fried Noodles</h4>
+          <p>Rp 56000</p>
+          <button type="button">Pilih</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Dimsum & Snack</h2>
+        <p>Camilan favorit untuk pembuka atau makan bersama.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card" data-category="dimsum">
+          <img src="hakau.png" alt="Hakau">
+          <h4>Hakau</h4>
+          <p>Rp 32000</p>
+          <button type="button">Pilih</button>
+        </article>

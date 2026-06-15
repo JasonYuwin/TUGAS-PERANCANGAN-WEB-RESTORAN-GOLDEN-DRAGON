@@ -99,3 +99,68 @@ function hitungTotal() {
 }
 
 }
+
+function pilihMenu(card) {
+  let data = ambilDataMenu(card);
+  let sudahAda = pesanan.find(function (item) {
+    return item.nama === data.nama;
+  });
+
+  if (sudahAda) {
+    sudahAda.qty++;
+  } else {
+    pesanan.push({
+      nama: data.nama,
+      harga: data.harga,
+      qty: 1
+    });
+  }
+
+  tampilkanPesanan();
+  tampilkanPesan(data.nama + " berhasil ditambahkan ke pesanan.", "success");
+
+  let bagianOrder = document.querySelector("#order");
+  if (bagianOrder) {
+    bagianOrder.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function tambahPesanan(nama) {
+  let item = pesanan.find(function (data) {
+    return data.nama === nama;
+  });
+
+  if (item) item.qty++;
+  tampilkanPesanan();
+}
+
+function kurangiPesanan(nama) {
+  let item = pesanan.find(function (data) {
+    return data.nama === nama;
+  });
+
+  if (item) {
+    item.qty--;
+    if (item.qty <= 0) {
+      hapusPesanan(nama);
+    }
+  }
+
+  tampilkanPesanan();
+}
+
+function hapusPesanan(nama) {
+  pesanan = pesanan.filter(function (item) {
+    return item.nama !== nama;
+  });
+
+  tampilkanPesanan();
+}
+
+function tampilkanPesan(teks, tipe) {
+  let kotakPesan = document.querySelector(".order-message");
+  if (!kotakPesan) return;
+
+  kotakPesan.innerText = teks;
+  kotakPesan.className = "order-message " + tipe + " is-visible";
+}

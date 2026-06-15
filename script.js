@@ -39,4 +39,63 @@ function hitungTotal() {
     totalAkhir: totalAkhir,
     estimasi: estimasi
   };
+  function tampilkanPesanan() {
+  let tbody = document.querySelector("#order tbody");
+  let totalHarga = document.querySelector(".total-price");
+  let jumlahItem = document.querySelector("#itemCount");
+  let waktu = document.querySelector("#estimateTime");
+  let promo = document.querySelector("#promoInfo");
+
+  if (!tbody) return;
+
+  tbody.innerHTML = "";
+
+  if (pesanan.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    `;
+  } else {
+    pesanan.forEach(function (item) {
+      let baris = document.createElement("tr");
+      baris.innerHTML = `
+        <td>${item.nama}</td>
+        <td>${formatRupiah(item.harga)}</td>
+        <td>
+          <div class="qty-control">
+            <button type="button" onclick="kurangiPesanan('${item.nama}')">-</button>
+            <span>${item.qty}</span>
+            <button type="button" onclick="tambahPesanan('${item.nama}')">+</button>
+          </div>
+        </td>
+        <td>
+          <div class="row-total">
+            <span>${formatRupiah(item.harga * item.qty)}</span>
+            <button type="button" class="remove-item" onclick="hapusPesanan('${item.nama}')">Hapus</button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(baris);
+    });
+  }
+
+  let hasil = hitungTotal();
+
+  if (totalHarga) totalHarga.innerText = "Total: " + formatRupiah(hasil.totalAkhir);
+  if (jumlahItem) jumlahItem.innerText = hasil.totalItem;
+  if (waktu) waktu.innerText = hasil.estimasi;
+
+  if (promo) {
+    if (hasil.diskon > 0) {
+      promo.innerText = "Diskon " + formatRupiah(hasil.diskon);
+    } else {
+      promo.innerText = "Min. Rp 100.000";
+    }
+  }
+}
+
 }

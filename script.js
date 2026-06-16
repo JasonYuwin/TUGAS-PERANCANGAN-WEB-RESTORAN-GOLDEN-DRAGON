@@ -164,3 +164,81 @@ function tampilkanPesan(teks, tipe) {
   kotakPesan.innerText = teks;
   kotakPesan.className = "order-message " + tipe + " is-visible";
 }
+
+function kirimPesanan(event) {
+  event.preventDefault();
+
+  let form = event.target;
+  let namaPelanggan = form.querySelector("input").value.trim();
+  let pilihan = form.querySelectorAll("select");
+  let layanan = pilihan[0].value;
+  let pembayaran = pilihan[1].value;
+  let hasil = hitungTotal();
+
+  if (namaPelanggan === "") {
+    tampilkanPesan("Nama pelanggan wajib diisi.", "error");
+    return;
+  }
+
+  if (pesanan.length === 0) {
+    tampilkanPesan("Pilih minimal satu menu terlebih dahulu.", "error");
+    return;
+  }
+
+  tampilkanPesan(
+    "Pesanan atas nama " + namaPelanggan +
+      " berhasil dibuat. Total " + formatRupiah(hasil.totalAkhir) +
+      ", layanan " + layanan +
+      ", pembayaran " + pembayaran +
+      ", estimasi " + hasil.estimasi + ".",
+    "success"
+  );
+
+  pesanan = [];
+  form.reset();
+  tampilkanPesanan();
+}
+
+function filterMenu() {
+  let cari = document.querySelector("#menuSearch");
+  let kategori = document.querySelector("#categoryFilter");
+
+  if (!cari || !kategori) return;
+
+  let kata = cari.value.toLowerCase();
+  let pilihKategori = kategori.value;
+  let semuaCard = document.querySelectorAll(".card[data-category]");
+
+  semuaCard.forEach(function (card) {
+    let nama = card.querySelector("h3, h4").innerText.toLowerCase();
+    let cocokNama = nama.includes(kata);
+    let cocokKategori = pilihKategori === "all" || card.dataset.category === pilihKategori;
+
+    if (cocokNama && cocokKategori) {
+      card.hidden = false;
+    } else {
+      card.hidden = true;
+    }
+  });
+}
+
+let tombolMenu = document.querySelectorAll(".card button");
+tombolMenu.forEach(function (tombol) {
+  tombol.addEventListener("click", function () {
+    pilihMenu(tombol.closest(".card"));
+  });
+});
+
+let formOrder = document.querySelectorAll(".order-form");
+formOrder.forEach(function (form) {
+  form.addEventListener("submit", kirimPesanan);
+});
+
+let inputCari = document.querySelector("#menuSearch");
+let pilihKategori = document.querySelector("#categoryFilter");
+
+if (inputCari) inputCari.addEventListener("input", filterMenu);
+if (pilihKategori) pilihKategori.addEventListener("change", filterMenu);
+
+tampilkanPesanan();
+

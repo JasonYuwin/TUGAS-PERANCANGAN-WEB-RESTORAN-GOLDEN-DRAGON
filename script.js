@@ -39,7 +39,9 @@ function hitungTotal() {
     totalAkhir: totalAkhir,
     estimasi: estimasi
   };
-  function tampilkanPesanan() {
+}
+
+function tampilkanPesanan() {
   let tbody = document.querySelector("#order tbody");
   let totalHarga = document.querySelector(".total-price");
   let jumlahItem = document.querySelector("#itemCount");
@@ -96,8 +98,6 @@ function hitungTotal() {
       promo.innerText = "Min. Rp 100.000";
     }
   }
-}
-
 }
 
 function pilihMenu(card) {
